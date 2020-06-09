@@ -16,35 +16,30 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-import com.giftCard.Service.VisitorService;
-import com.giftCard.visitor.VisitorController;
+import com.giftCard.Service.BillService;
+import com.giftCard.visitor.BillController;
 
-public class VisitorControllerTest {
+public class BillControllerTest {
 
-@InjectMocks
-	private VisitorController visitorController;
+	@InjectMocks
+	private BillController Controller;
 
 	private MockMvc mockMvc;
 
 	@Autowired
-	private VisitorService Service;
+	private BillService Service;
 
 	@Before
 	public void setup() {
 		System.out.println("Before Every method....");
 		MockitoAnnotations.initMocks(this);
-		this.mockMvc = MockMvcBuilders.standaloneSetup(visitorController).build();
+		this.mockMvc = MockMvcBuilders.standaloneSetup(Controller).build();
 	}
 
 	@Test
-	public void testNewVisitor() throws Exception {
-	this.mockMvc.perform(get("/new")).andExpect(status().isOk()).
-		andExpect(view().name("new_visitor"));
-}
-	@Test
-	public void testsaveVisitor() throws Exception {
-	this.mockMvc.perform(get("/save")).andExpect(status().isOk()).
-		andExpect(view().name("new_visitor"));
-}
+	public void testBill() throws Exception {
+		this.mockMvc.perform(get("/bill")).andExpect(status().isOk())
+		.andExpect(view().name("billPage"));
+	}
 
 }

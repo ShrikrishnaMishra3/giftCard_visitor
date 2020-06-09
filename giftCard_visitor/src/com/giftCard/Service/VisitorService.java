@@ -27,6 +27,7 @@ public class VisitorService {
 	public void save(VisitorModel visitorNew) {
 		repo.save(visitorNew);
 		
+	
 	}
 	
 
