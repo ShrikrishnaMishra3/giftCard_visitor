@@ -1,4 +1,4 @@
-package com.giftCard.visitor;
+package com.giftCard.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -42,6 +42,8 @@ public class VisitorController {
 	@RequestMapping(value="/save", method = RequestMethod.POST)
 	public String saveVisitorModel(@ModelAttribute("visitorNew") VisitorModel visitorNew) {
 	service.save(visitorNew);
-	return "/bill";
+	return "bill";
+	
+	
 	}
 }

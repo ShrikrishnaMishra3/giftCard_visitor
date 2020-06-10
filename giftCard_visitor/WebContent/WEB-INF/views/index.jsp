@@ -10,16 +10,31 @@
 <body>
 	<div align="center">
 		<h1>Welcome Visitor</h1>
-		
+
 		<h3>
 			<a href="new">NewVisitor</a>
 		</h3>
-		
+
+		<table border="1" padding="5">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Email</th>
+
+			</tr>
+
 			<c:forEach items="${listVisitor}" var="visitor">
-				
+				<tr>
+					<td>${visitor.id}</td>
+
+					<td>${visitor.name}</td>
+
+					<td>${visitor.email}</td>
+				</tr>
+
 
 			</c:forEach>
-
+		
 		</table>
 	</div>
 </body>

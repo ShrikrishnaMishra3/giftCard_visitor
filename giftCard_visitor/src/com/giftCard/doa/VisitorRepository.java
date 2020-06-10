@@ -1,4 +1,4 @@
-package com.giftCard.Repository;
+package com.giftCard.doa;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

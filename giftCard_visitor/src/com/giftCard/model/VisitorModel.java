@@ -8,34 +8,34 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="visitor_detail")
+@Table(name = "visitor_detail")
 public class VisitorModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private int id;
 	@Column
 	private String name;
 	@Column
 	private String email;
 
-
-	
 	public VisitorModel() {
-		
-	}
-	public VisitorModel(Long id,String name,String email) {
-		super();
-		this.id=id;
-		this.name=name;
-		this.email=email;
 
 	}
-	public Long getId() {
+
+	public VisitorModel(int id, String name, String email) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+
+	}
+
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(int i) {
+		this.id = i;
 	}
 
 	public String getName() {
@@ -53,5 +53,15 @@ public class VisitorModel {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
+	private boolean active = true;
 
 }

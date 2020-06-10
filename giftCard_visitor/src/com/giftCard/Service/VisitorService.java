@@ -5,8 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.giftCard.Repository.VisitorRepository;
+import com.giftCard.doa.VisitorRepository;
 import com.giftCard.model.VisitorModel;
 
 
