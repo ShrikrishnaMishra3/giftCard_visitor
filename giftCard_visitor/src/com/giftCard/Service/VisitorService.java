@@ -1,6 +1,5 @@
 package com.giftCard.Service;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,26 +7,15 @@ import org.springframework.stereotype.Service;
 import com.giftCard.doa.VisitorRepository;
 import com.giftCard.model.VisitorModel;
 
+public interface VisitorService {
 
+	// This method is to get All notes
+	public List<VisitorModel> getAllVisitorModel();
 
-@Service
-public class VisitorService {
 	
-	@Autowired
-	private VisitorRepository repo;
-	
-	 
-	public List<VisitorModel> listAll() {
-		return (List<VisitorModel>) repo.findAll();
-		
-	}
 
+	public List<VisitorModel> listAll();
 
-	public void save(VisitorModel visitorNew) {
-		repo.save(visitorNew);
-		
-	
-	}
-	
+	public void save(VisitorModel visitorNew);
 
 }

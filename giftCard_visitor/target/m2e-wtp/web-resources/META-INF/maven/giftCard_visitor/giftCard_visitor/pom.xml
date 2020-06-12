@@ -6,6 +6,7 @@
 	<artifactId>giftCard_visitor</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+	<name>BillTracker</name>
 	<properties>
 		<spring.version>5.1.5.RELEASE</spring.version>
 		<hivernate.version>5.4.1.Final</hivernate.version>

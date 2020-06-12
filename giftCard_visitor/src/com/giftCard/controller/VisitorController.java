@@ -1,7 +1,10 @@
 package com.giftCard.controller;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,36 +17,33 @@ import org.springframework.web.servlet.ModelAndView;
 import com.giftCard.Service.VisitorService;
 import com.giftCard.model.VisitorModel;
 
-
 @Controller
 public class VisitorController {
-	
+
 	@Autowired
 	private VisitorService service;
-	
-	
+
 	@RequestMapping("/")
-	public ModelAndView home(){
-		
+	public ModelAndView home() {
+
 		ModelAndView mav = new ModelAndView("index");
-		
 		List<VisitorModel> listVisitor = service.listAll();
-		
 		mav.addObject("listVisitor", listVisitor);
-		
+
 		return mav;
 	}
+
 	@RequestMapping("/new")
-	public String newVisitorForm(Map<String,Object> model) {
+	public String newVisitorForm(Map<String, Object> model) {
 		model.put("visitorNew", new VisitorModel());
-				return "new_visitor";
-		
+		return "new_visitor";
+
 	}
-	@RequestMapping(value="/save", method = RequestMethod.POST)
+
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String saveVisitorModel(@ModelAttribute("visitorNew") VisitorModel visitorNew) {
-	service.save(visitorNew);
-	return "bill";
-	
-	
+		service.save(visitorNew);
+		return "bill";
+
 	}
 }

@@ -4,7 +4,7 @@
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
-        <property name="context-root" value="giftCard_visitor"/>
         <property name="java-output-path" value="/giftCard_visitor/build/classes"/>
+        <property name="context-root" value="BillTracker"/>
     </wb-module>
 </project-modules>

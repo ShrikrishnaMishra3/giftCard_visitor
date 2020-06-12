@@ -8,15 +8,14 @@ import org.springframework.stereotype.Service;
 import com.giftCard.doa.BillRepository;
 import com.giftCard.model.BillModel;
 
-@Service
-public class BillService {
 
-	@Autowired
-	private BillRepository repo;
 
-	public List<BillModel> listAll() {
-		return (List<BillModel>) repo.findAll();
+public interface BillService {
+
+	public List<BillModel> listAll();	
+
+	public void save(BillModel billNew);
 
 	}
 
-}
+
