@@ -8,7 +8,7 @@
 	<packaging>war</packaging>
 	<name>BillTracker</name>
 	<properties>
-		<spring.version>5.1.5.RELEASE</spring.version>
+		<spring.version>5.2.7.RELEASE</spring.version>
 		<hivernate.version>5.4.1.Final</hivernate.version>
 	</properties>
 
@@ -66,7 +66,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>3.2.3.RELEASE</version>
+			<version>5.2.7.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
 
